@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ڕێبەرنامەی زێڕینی ڕێزمانی فارسی</title>
+    <!-- Tailwind CSS for high-end styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Fonts: Vazirmatn & Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Vazirmatn:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            gold: '#C5A880', /* Premium Luxury Gold */
+                            goldDark: '#8F6B32',
+                            goldLight: '#F3EFE9',
+                            navy: '#1E293B', /* Elegant Deep Navy */
+                            navyDark: '#0F172A',
+                            accent: '#F9F6F0' /* Warm Ivory background */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Vazirmatn', 'Cairo', sans-serif;
+            background-color: #FAF9F6; /* Premium Ivory/Alabaster Background */
+            color: #1E293B;
+            transition: all 0.4s ease;
+        }
+
+        /* Perfect contrast styles */
+        .text-premium-dark {
+            color: #0F172A;
+        }
+
+        /* 3D Premium Card Flipping */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        /* Smooth Custom Transitions */
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Glassmorphic elements */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(197, 168, 128, 0.2);
+        }
+
+        /* Premium Print Layout */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                direction: rtl;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-layout {
+                display: block !important;
+                width: 100% !important;
+            }
+            .tab-content {
+                display: block !important;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- Beautiful Minimal Header with Luxury Gold Accent -->
+    <header class="bg-white/95 sticky top-0 z-50 no-print border-b border-brand-gold/20 shadow-sm backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <div class="bg-brand-navyDark text-brand-gold p-3 rounded-2xl shadow-md shadow-brand-gold/10">
+                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black text-brand-navyDark tracking-wide flex items-center gap-2">
+                        ڕێبەرنامەی زێڕینی ڕێزمانی فارسی
+                        <span class="text-xs bg-brand-gold/20 text-brand-goldDark font-bold px-2 py-0.5 rounded-full border border-brand-gold/30">کۆرسی تایبەت</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium mt-1">ئاسانترین و هاوچەرخترین سەکۆی فێربوونی خێرا و کارلێکەر</p>
+                </div>
+            </div>
+            
+            <button onclick="triggerPrint()" class="flex items-center gap-2 bg-brand-navyDark hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-brand-gold/20 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-print text-brand-gold"></i>
+                <span>چاپکردن یان پاشەکەوتی PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-8 w-full">
+        <!-- Exquisite Hero Section with Soft Golden Hues -->
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-navyDark via-slate-900 to-slate-950 p-8 sm:p-12 text-white mb-10 shadow-2xl shadow-brand-navyDark/10">
+            <!-- Background Decorative Lights -->
+            <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-slate-800/20 blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-3xl">
+                <span class="inline-flex items-center gap-1.5 bg-brand-gold/15 text-brand-gold px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-gold/20 mb-6">
+                    <i class="fa-solid fa-sparkles text-xs"></i> مێسۆدی کارلێکەری فێربوون
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight mb-4">قواعدی زمانی فارسی بە هاوکێشەی ماتماتیکی</h2>
+                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed font-light">
+                    بێ ماندووبوون بە یارمەتی فلاش کارتی هاوچەرخ، ڕاهێنانی خۆکار و یارییەکی داینامیکی پرسیار و وەڵام، ئاستی زمانەکەت بۆ لوتکە بەرز بکەرەوە.
+                </p>
+                
+                <!-- Modern Search input with Luxury Shadows -->
+                <div class="relative max-w-lg shadow-xl shadow-black/10 rounded-2xl">
+                    <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 text-lg"></i>
+                    <input type="text" id="search-bar" onkeyup="filterGrammar()" placeholder="لێرەدا بگەرێ بەدوای فورموول، یاسا یان نموونەکان..." 
+                           class="w-full pl-4 pr-12 py-4 bg-white/10 text-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-gold focus:bg-white/15 placeholder-slate-400 font-medium transition-all text-sm sm:text-base border border-white/10">
+                </div>
+            </div>
+        </div>
+
+        <!-- Elegant Segmented Navigation Controls -->
+        <div class="flex flex-wrap gap-2 mb-8 no-print overflow-x-auto pb-2" id="tab-navigation">
+            <button onclick="switchTab('overview')" id="tab-btn-overview" class="tab-btn active px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-brand-navyDark text-white border border-brand-navyDark">
+                <i class="fa-solid fa-circle-nodes ml-2 text-brand-gold"></i> ١. جێناوە کەسییەکان (شناسه‌ها)
+            </button>
+            <button onclick="switchTab('imperative')" id="tab-btn-imperative" class="tab-btn px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-white text-brand-navy hover:bg-slate-50 border border-slate-200">
+                <i class="fa-solid fa-bolt ml-2 text-brand-gold"></i> ٢. کرداری فرمان (فعل امر)
+            </button>
+            <button onclick="switchTab('past-tenses')" id="tab-btn-past-tenses" class="tab-btn px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-white text-brand-navy hover:bg-slate-50 border border-slate-200">
+                <i class="fa-solid fa-clock-rotate-left ml-2 text-brand-gold"></i> ٣. کاتەکانی ڕابردوو (ماضی)
+            </button>
+            <button onclick="switchTab('present-tenses')" id="tab-btn-present-tenses" class="tab-btn px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-white text-brand-navy hover:bg-slate-50 border border-slate-200">
+                <i class="fa-solid fa-hourglass-half ml-2 text-brand-gold"></i> ٤. کاتەکانی ئێستا (مضارع)
+            </button>
+            <button onclick="switchTab('culture-customs')" id="tab-btn-culture-customs" class="tab-btn px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-white text-brand-navy hover:bg-slate-50 border border-slate-200">
+                <i class="fa-solid fa-compass-drafting ml-2 text-brand-gold"></i> ٥. هەق و قانوون و نەریتەکان
+            </button>
+        </div>
+
+        <!-- Interactive Formula Flashcards Section -->
+        <section class="mb-10 no-print bg-white border border-slate-200/60 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-100/50">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+                <div>
+                    <h3 class="text-xl font-extrabold text-brand-navyDark flex items-center gap-2">
+                        <i class="fa-solid fa-cube text-brand-gold text-2xl"></i> فلاش کارتی هاوکێشەی کاتەکان
+                    </h3>
+                    <p class="text-sm text-slate-500 font-medium mt-1">بۆ تاقیکردنەوەی خۆت و بینینی هاوکێشەکان، کلیك لەسەر کارتەکە بکە تا سەرەوژێر بێت.</p>
+                </div>
+                <span id="card-counter" class="text-sm bg-brand-navy/5 text-brand-navyDark px-4 py-2 rounded-xl font-bold border border-slate-200">1 / 6</span>
+            </div>
+
+            <!-- Beautiful Minimalist 3D Flip Card Container -->
+            <div class="flex justify-center items-center py-4">
+                <div onclick="flipCard()" class="perspective-1000 w-full max-w-xl h-64 cursor-pointer">
+                    <div id="flashcard-inner" class="preserve-3d duration-500 ease-out relative w-full h-full shadow-lg rounded-2xl bg-white border border-brand-gold/20 text-slate-900 flex flex-col items-center justify-center p-6 text-center">
+                        
+                        <!-- Front Face of Card -->
+                        <div class="backface-hidden absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-tr from-slate-50 to-white rounded-2xl">
+                            <span class="text-xs bg-brand-gold/15 text-brand-goldDark font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider" id="card-sub">قواعدی بنەڕەتی</span>
+                            <h4 class="text-lg sm:text-2xl font-black text-brand-navyDark px-4 leading-relaxed" id="card-front">هاوکێشەی دروستکردنی فەرمانی تاک چییە؟</h4>
+                            <p class="text-xs mt-6 text-slate-400 font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-arrows-rotate text-brand-gold animate-spin-slow"></i> کلیک بکە بۆ نیشاندانی شیکارەکە
+                            </p>
+                        </div>
+                        
+                        <!-- Back Face of Card (Luxury Gold accent design) -->
+                        <div class="backface-hidden absolute inset-0 flex flex-col items-center justify-center p-6 rotate-y-180 bg-brand-accent rounded-2xl border-2 border-brand-gold/40">
+                            <span class="text-xs bg-brand-gold text-white font-bold px-3 py-1 rounded-full mb-4 tracking-wide">وەڵامی هاوکێشەکە</span>
+                            <h4 class="text-lg sm:text-2xl font-black text-brand-goldDark leading-relaxed px-4" id="card-back">بـ + ڕەگی ئێستا (بن مضارع) + بێ نیشانە</h4>
+                            <p class="text-xs mt-6 text-slate-400 font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-arrows-rotate"></i> گەڕانەوە بۆ پێشەوەی کارتەکە
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3 mt-6">
+                <button onclick="prevCard()" class="px-5 py-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl transition-all font-bold text-sm shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-chevron-right text-brand-gold"></i> کارتەکەی پێشوو
+                </button>
+                <button onclick="nextCard()" class="px-5 py-3 bg-brand-navyDark hover:bg-slate-800 text-white rounded-xl transition-all font-bold text-sm shadow-md shadow-brand-navyDark/10 flex items-center gap-2">
+                    کارتەکەی دواتر <i class="fa-solid fa-chevron-left text-brand-gold"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Grammar content pages -->
+        <div id="grammar-content" class="print-layout">
+            
+            <!-- OVERVIEW: Pronouns and Identifiers -->
+            <div id="tab-overview" class="tab-content print-layout">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 mb-8">
+                    <h3 class="text-xl sm:text-2xl font-black text-brand-navyDark mb-4 border-b border-slate-100 pb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-users text-brand-gold text-2xl"></i> ناساندنی جێناوە کەسییە سەربەخۆ و لکاوەکان (شناسه‌ها)
+                    </h3>
+                    <p class="text-sm sm:text-base text-slate-600 mb-6 leading-relaxed">
+                        بناغەی دروستبوونی تەواوی کاتەکان بە زمانی فارسی پەیوەستە بە بەکارهێنانی «شناسە» کەسییەکان. ئەم خشتەیەی خوارەوە جێناوەکان و نیشانەی گونجاو نیشان دەدات:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Singular Pronouns -->
+                        <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-100 shadow-sm">
+                            <h4 class="font-extrabold text-base text-brand-navyDark mb-4 flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-brand-gold"></div> کەسەکانی تاک (مفرد)
+                            </h4>
+                            <table class="w-full text-right text-sm">
+                                <thead>
+                                    <tr class="border-b border-slate-200/80 text-slate-400">
+                                        <th class="pb-3 font-semibold text-right">کەس</th>
+                                        <th class="pb-3 font-semibold text-right">جێناوی ئازاد</th>
+                                        <th class="pb-3 font-semibold text-right">نیشانەی لکاو (شناسه)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">یەکەمی تاک</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">من</td>
+                                        <td class="py-3.5 text-brand-navyDark font-extrabold font-mono text-base">ـَم (m)</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">دووەمی تاک</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">تو</td>
+                                        <td class="py-3.5 text-brand-navyDark font-extrabold font-mono text-base">ـی (y)</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">سێیەمی تاک</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">او</td>
+                                        <td class="py-3.5 text-slate-400 font-medium text-xs">بێ نیشانە / ـَد</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Plural Pronouns -->
+                        <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-100 shadow-sm">
+                            <h4 class="font-extrabold text-base text-brand-navyDark mb-4 flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-brand-gold"></div> کەسەکانی کۆ (جمع)
+                            </h4>
+                            <table class="w-full text-right text-sm">
+                                <thead>
+                                    <tr class="border-b border-slate-200/80 text-slate-400">
+                                        <th class="pb-3 font-semibold text-right">کەس</th>
+                                        <th class="pb-3 font-semibold text-right">جێناوی ئازاد</th>
+                                        <th class="pb-3 font-semibold text-right">نیشانەی لکاو (شناسه)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">یەکەمی کۆ</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">ما</td>
+                                        <td class="py-3.5 text-brand-navyDark font-extrabold font-mono text-base">ـیم (im)</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">دووەمی کۆ</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">شما</td>
+                                        <td class="py-3.5 text-brand-navyDark font-extrabold font-mono text-base">ـید (id)</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                        <td class="py-3.5 font-bold">سێیەمی کۆ</td>
+                                        <td class="py-3.5 text-brand-goldDark font-bold font-mono text-base">آنها / ایشان</td>
+                                        <td class="py-3.5 text-brand-navyDark font-extrabold font-mono text-base">ـند (nd)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMPERATIVE TENSE -->
+            <div id="tab-imperative" class="tab-content hidden print-layout">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 mb-8">
+                    <span class="bg-brand-gold/15 text-brand-goldDark text-xs font-bold px-3 py-1.5 rounded-full border border-brand-gold/20">قواعدی فەرمان کردن</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-brand-navyDark mt-4 mb-3">یاسای زێڕینی دروستکردنی کرداری فەرمان (فعل امر)</h3>
+                    <p class="text-sm sm:text-base text-slate-500 mb-8">کرداری فەرمان تەنها بۆ دوو کەس دەبێت: یەکێك بۆ خۆت بە ڕاستەوخۆ (تو)، یەکێکیش بۆ کۆمەڵێك کەس (شما).</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <!-- Singular Imperative -->
+                        <div class="bg-brand-accent/40 p-6 rounded-2xl border border-brand-gold/20 shadow-sm relative">
+                            <span class="absolute top-4 left-4 text-xs font-bold text-brand-goldDark bg-white/80 border border-brand-gold/15 px-2 py-1 rounded">یاسای تاک</span>
+                            <h4 class="font-extrabold text-lg text-brand-navyDark mb-3">١. فەرمانی تاک (امر مفرد)</h4>
+                            <p class="mb-4 text-slate-600 leading-relaxed">بۆ فەرمان کردن بە یەک کەس، پێشگر دەخەینە پێش ڕەگی ڕابردوو بێ ئەوەی هیچ نیشانەیەک بە کۆتاییەکەوە بلکێنین.</p>
+                            
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold px-4 py-3 rounded-xl mb-4 text-center text-lg shadow-sm">
+                                بـ + بن مضارع + 0
+                            </div>
+                            
+                            <span class="text-xs text-slate-400 font-bold block mb-1">نموونەی شیکارکراو:</span>
+                            <p class="text-base text-slate-800 font-medium">نوشتن (نووسین) &larr; بن مضارع: نویس &larr; <strong class="text-brand-goldDark font-mono font-extrabold text-lg">بنویس!</strong> (بنووسە!)</p>
+                        </div>
+
+                        <!-- Plural Imperative -->
+                        <div class="bg-brand-accent/40 p-6 rounded-2xl border border-brand-gold/20 shadow-sm relative">
+                            <span class="absolute top-4 left-4 text-xs font-bold text-brand-goldDark bg-white/80 border border-brand-gold/15 px-2 py-1 rounded">یاسای کۆ</span>
+                            <h4 class="font-extrabold text-lg text-brand-navyDark mb-3">٢. فەرمانی کۆ (امر جمع)</h4>
+                            <p class="mb-4 text-slate-600 leading-relaxed">بۆ فەرمان کردن بە چەند کەسێک، نیشانەی لکاوی (ـید) دەلکێنرێت بە کۆتایی فەرمانەکەوە.</p>
+                            
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold px-4 py-3 rounded-xl mb-4 text-center text-lg shadow-sm">
+                                بـ + بن مضارع + ید
+                            </div>
+                            
+                            <span class="text-xs text-slate-400 font-bold block mb-1">نموونەی شیکارکراو:</span>
+                            <p class="text-base text-slate-800 font-medium">نوشتن (نووسین) &larr; بن مضارع: نویس &larr; <strong class="text-brand-goldDark font-mono font-extrabold text-lg">بنویسید!</strong> (بنووسن!)</p>
+                        </div>
+                    </div>
+
+                    <!-- Important Grammatical Rules in Premium Styling -->
+                    <div class="mt-8 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <h4 class="font-extrabold text-base text-brand-navyDark mb-3 flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-exclamation text-brand-gold"></i> تێبینییە وردەکانی کرداری فەرمان:
+                        </h4>
+                        <ul class="list-inside space-y-3 text-sm text-slate-600">
+                            <li><strong class="text-brand-navyDark">دۆزینەوەی بن مضارع:</strong> بـ لە فەرمانەکە لادە و ڕەگی مضارعت دەستدەکەوێت (برو &larr; رو).</li>
+                            <li><strong class="text-brand-navyDark">گۆڕانی دەنگەکان:</strong> دەنگی (بـِ) دەبێت بە (بُـ) ئەگەر پیتی یەکەمی ڕەگەکە ضمه بێت (بخۆر &larr; <span class="font-bold text-brand-goldDark">بُخور</span>).</li>
+                            <li><strong class="text-brand-navyDark">کرداری ڕێگری (نهی):</strong> تەنها (نـ) دەخرێتە سەرەتای فەرمانەکە لە جێگەی (بـ) وەک: <span class="font-bold text-rose-700">ننویس!</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAST TENSES -->
+            <div id="tab-past-tenses" class="tab-content hidden print-layout">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Past Continuous -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-navyDark text-brand-gold text-xs font-bold px-3 py-1.5 rounded-full">ڕابردووی بەردەوام</span>
+                            <h3 class="text-xl sm:text-2xl font-black text-brand-navyDark mt-4 mb-3">ماضی استمراری</h3>
+                            <p class="text-sm text-slate-500 mb-6">کاتێک لە ڕابردوودا کارێک بە بەردەوامی یان وەک نەریت هەمیشە ئەنجام دراوە.</p>
+                            
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold px-4 py-3 rounded-xl mb-6 text-center text-sm sm:text-base">
+                                می‌ + بن ماضی + شناسه
+                            </div>
+
+                            <span class="text-xs text-slate-400 font-bold block mb-2">گردانکردنی کرداری (رفتن &larr; رفت):</span>
+                            <div class="grid grid-cols-2 gap-2.5 font-mono text-xs text-slate-700">
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">من</span> می‌رفتم</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">ما</span> می‌رفتیم</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">تو</span> می‌رفتی</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">شما</span> می‌رفتید</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">او</span> می‌رفت</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">آنها</span> می‌رفتند</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-slate-400 font-bold">وشە کلیلیەکان:</span>
+                            <p class="text-slate-600 mt-1">همیشه (هەمیشە)، هر روز (هەموو ڕۆژێک)، آن زمان‌ها.</p>
+                        </div>
+                    </div>
+
+                    <!-- Past Subjunctive -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-navyDark text-brand-gold text-xs font-bold px-3 py-1.5 rounded-full">ڕابردووی گومانی خواستی</span>
+                            <h3 class="text-xl sm:text-2xl font-black text-brand-navyDark mt-4 mb-3">ماضی التزامی</h3>
+                            <p class="text-sm text-slate-500 mb-6">دەربڕینی ئاوات، گومان، یان پێویستیەک کە ڕەنگە لە ڕابردوودا ئەنجام درابێت.</p>
+                            
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold px-4 py-3 rounded-xl mb-6 text-center text-sm sm:text-base">
+                                صفت مفعولی (بن ماضی + ه) + (باشم، باشی...)
+                            </div>
+
+                            <span class="text-xs text-slate-400 font-bold block mb-2">گردانکردنی کرداری (رفتن &larr; رفته):</span>
+                            <div class="grid grid-cols-2 gap-2.5 font-mono text-xs text-slate-700">
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">من</span> رفته باشم</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">ما</span> رفته باشیم</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">تو</span> رفته باشی</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">شما</span> رفته باشید</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">او</span> رفته باشد</div>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100"><span class="text-slate-400">آنها</span> رفته باشند</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 text-xs">
+                            <span class="text-slate-400 font-bold">وشە کلیلیەکان:</span>
+                            <p class="text-slate-600 mt-1">شاید (ڕەنگە)، کاش (خۆزگە)، باید (دەبێت).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRESENT TENSES -->
+            <div id="tab-present-tenses" class="tab-content hidden print-layout">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Present Indicative -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl shadow-slate-100/30 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-gold/15 text-brand-goldDark text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/20">مضارع اخباری</span>
+                            <h4 class="text-lg font-black text-brand-navyDark mt-3 mb-2">ئێستای ڕاگەیاندن</h4>
+                            <p class="text-xs text-slate-500 mb-4 leading-relaxed">بۆ کاری چاوەڕوانکراو و ڕاستەقینە کە لە ئێستا یان داهاتوودا دەکرێت.</p>
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold p-3 rounded-xl text-xs text-center mb-4">
+                                می‌ + بن مضارع + شناسه
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">نموونە: <span class="font-bold text-brand-navyDark font-mono text-sm">می‌نویسم</span> (دەنووسم)</p>
+                    </div>
+
+                    <!-- Present Subjunctive -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl shadow-slate-100/30 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-gold/15 text-brand-goldDark text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/20">مضارع التزامی</span>
+                            <h4 class="text-lg font-black text-brand-navyDark mt-3 mb-2">ئێستای خواستی</h4>
+                            <p class="text-xs text-slate-500 mb-4 leading-relaxed">بۆ کاری ئاواتخواز، مەرج یان شیمانە کە چاوەڕوانی دروستبوونی دەکەین.</p>
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold p-3 rounded-xl text-xs text-center mb-4">
+                                بـ + بن مضارع + شناسه
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">نموونە: <span class="font-bold text-brand-navyDark font-mono text-sm">بنویسم</span> (بنووسم)</p>
+                    </div>
+
+                    <!-- Present Continuous -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl shadow-slate-100/30 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-gold/15 text-brand-goldDark text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/20">مضارع مستمر</span>
+                            <h4 class="text-lg font-black text-brand-navyDark mt-3 mb-2">ئێستای بەردەوام</h4>
+                            <p class="text-xs text-slate-500 mb-4 leading-relaxed">بۆ کارێک لە ڕێک کاتی قسەکردندا ڕوودەدات.</p>
+                            <div class="bg-brand-navyDark text-brand-gold font-mono font-bold p-3 rounded-xl text-xs text-center mb-4">
+                                داشتن + مضارع اخباری
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">نموونە: <span class="font-bold text-brand-navyDark font-mono text-sm">دارم می‌نویسم</span> (خەریکم دەنووسم)</p>
+                    </div>
+                </div>
+
+                <!-- Modern Table Comparison of Present Continuous -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 mb-8">
+                    <h3 class="text-lg font-extrabold text-brand-navyDark mb-4">بەراوردکاری کاتی ئێستای بەردەوام (مضارع مستمر)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right text-sm">
+                            <thead>
+                                <tr class="border-b border-slate-200 text-slate-400">
+                                    <th class="pb-3 font-semibold text-right">کەس</th>
+                                    <th class="pb-3 font-semibold text-right">تاک (مفرد)</th>
+                                    <th class="pb-3 font-semibold text-right">کۆ (جمع)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-700 font-medium">
+                                <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                    <td class="py-3.5 font-bold">یەکەم کەس</td>
+                                    <td class="py-3.5 font-mono text-brand-navyDark text-base font-semibold">دارم می‌روم <span class="text-xs text-slate-400">(خەریکم دەڕۆم)</span></td>
+                                    <td class="py-3.5 font-mono text-slate-600">داریم می‌رویم</td>
+                                </tr>
+                                <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                    <td class="py-3.5 font-bold">دووەم کەس</td>
+                                    <td class="py-3.5 font-mono text-brand-navyDark text-base font-semibold">داری می‌روی <span class="text-xs text-slate-400">(خەریکی دەڕۆی)</span></td>
+                                    <td class="py-3.5 font-mono text-slate-600">دارید می‌روید</td>
+                                </tr>
+                                <tr class="hover:bg-brand-accent/40 smooth-transition">
+                                    <td class="py-3.5 font-bold">سێیەم کەس</td>
+                                    <td class="py-3.5 font-mono text-brand-navyDark text-base font-semibold">دارد می‌رود <span class="text-xs text-slate-400">(خەریکە دەڕوات)</span></td>
+                                    <td class="py-3.5 font-mono text-slate-600">دارند می‌روند</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Custom Alerter for Negative Continuous -->
+                    <div class="mt-6 p-4 bg-amber-50 border border-brand-gold/30 rounded-2xl flex items-start gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-brand-goldDark text-lg mt-0.5"></i>
+                        <div class="text-xs sm:text-sm text-brand-goldDark">
+                            <strong class="font-bold">تێبینی زۆر گرنگ:</strong> لە زمانی فارسیدا کاتی ئێستای بەردەوام (مضارع مستمر) هیچ کاتێک نەرێ (نفی) ناکرێت. بۆ نموونە ناکرێت بڵێین «ندارم می‌روم»، بۆ ئەم مەبەستە کاتی مضارع اخباری بەکاردەهێنرێت: <span class="font-bold font-mono text-rose-700 bg-white px-2 py-0.5 rounded border border-rose-100">نمی‌روم</span>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CULTURE & CUSTOMS -->
+            <div id="tab-culture-customs" class="tab-content hidden print-layout">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/60 shadow-xl shadow-slate-100/50 mb-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="bg-brand-gold/10 text-brand-goldDark p-3 rounded-2xl">
+                            <i class="fa-solid fa-scale-balanced text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-black text-brand-navyDark">یاسا و هەق و قانوون - جەژن و نەریتەکان</h3>
+                            <p class="text-sm text-slate-500 font-medium mt-1">شارەزایی فەرهەنگی و کلتووری زمانی فارسی دەربارەی جەژنە نەتەوەییەکان</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <!-- Persian New Year Customs Card -->
+                        <div class="bg-brand-accent/30 p-6 rounded-2xl border border-brand-gold/15 shadow-sm">
+                            <h4 class="font-extrabold text-lg text-brand-navyDark mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-sun text-brand-gold"></i> جەژنی نەورۆز (جشن نوروز)
+                            </h4>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                در نوروز، با شروع سال جدید، ایرانی‌ها معمولاً لباس‌های نو و زیبا می‌پوشند. خانم‌ها لباس‌های بلند و رنگارنگ می‌پوشند و اغلب از رنگ‌های شاد مثل سبز، قرمز، زرد و نارنجی استفاده می‌کنند. آقایان هم لباس‌های رسمی یا نیمه‌رسمی می‌پوشند. ایرانی‌ها معمولا سبزی‌پلو با ماهی می‌خورند.
+                            </p>
+                            <div class="mt-4 p-4 bg-white/60 rounded-xl border border-brand-gold/10 text-xs">
+                                <span class="text-brand-goldDark font-bold">واتای کوردی کورتە:</span>
+                                <p class="text-slate-500 mt-1">لە نەورۆزدا خەڵک جلی نوێ و شاد دەپۆشن و خواردنی «سەوزی پڵۆ بە ماسی» یەکێکە لە گرنگترین نەریتەکانیان.</p>
+                            </div>
+                        </div>
+
+                        <!-- Birthday Celebration Card -->
+                        <div class="bg-brand-accent/30 p-6 rounded-2xl border border-brand-gold/15 shadow-sm">
+                            <h4 class="font-extrabold text-lg text-brand-navyDark mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-cake-candles text-brand-gold"></i> جەژنی لەدایکبوون (جشن تولد)
+                            </h4>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                من در جشنِ تولد کِیک می‌خورَم. نوشیدَنی می‌خورَم. مهمان داریم. شمعِ روی کیک را فوت می‌کنم. موسیقی گوش می‌کنیم. با دوستانم صحبت می‌کنم. لباسِ زیبا می‌پوشَم. هدیه‌ می‌گیرم. خانه را تزئین می‌کنیم. بادکُنَک می‌خَریم.
+                            </p>
+                            <div class="mt-4 p-4 bg-white/60 rounded-xl border border-brand-gold/10 text-xs">
+                                <span class="text-brand-goldDark font-bold">کورتەی نەریتی لەدایکبوون:</span>
+                                <p class="text-slate-500 mt-1">کوژاندنەوەی مۆم (فوت کردن شمع)، کڕینی باڵۆن (خریدن بادکنک) و ڕازاندنەوەی ماڵ (تزیین خانه).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modern Festivals Comparison Grid -->
+                    <div class="border-t border-slate-100 pt-8">
+                        <h4 class="font-extrabold text-lg text-brand-navyDark mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-globe text-brand-gold"></i> فێستیڤاڵە فەرمی و بەناوبانگەکانی جیهان
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Festival 1 -->
+                            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 shadow-sm hover:border-brand-gold/30 smooth-transition">
+                                <span class="text-[10px] bg-brand-navyDark text-brand-gold px-2.5 py-1 rounded-md font-bold">برزیل</span>
+                                <h5 class="font-extrabold text-base text-brand-navyDark mt-3">کارناواڵی ڕیۆ</h5>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">لە ساڵی ١٦٤١ دەستی پێکردووە و سەمای سامبا گرنگترین بەشی فێستیڤاڵەکەیە.</p>
+                            </div>
+                            <!-- Festival 2 -->
+                            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 shadow-sm hover:border-brand-gold/30 smooth-transition">
+                                <span class="text-[10px] bg-brand-navyDark text-brand-gold px-2.5 py-1 rounded-md font-bold">چین</span>
+                                <h5 class="font-extrabold text-base text-brand-navyDark mt-3">سالی نوێی چینی</h5>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">١٥ ڕۆژ بەردەوام دەبێت و بە خواردنی بێ گۆشت و فێستیڤاڵی فانوس کۆتایی پێدێت.</p>
+                            </div>
+                            <!-- Festival 3 -->
+                            <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 shadow-sm hover:border-brand-gold/30 smooth-transition">
+                                <span class="text-[10px] bg-brand-navyDark text-brand-gold px-2.5 py-1 rounded-md font-bold">اسپانیا</span>
+                                <h5 class="font-extrabold text-base text-brand-navyDark mt-3">لا توماتینا</h5>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">تەقینەوەی تەماتە! لە ئابی هەموو ساڵێک زیاتر لە ١٠٠ تەن تەماتە بەکار دێت.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Interactive Drills Page -->
+        <section class="mt-10 mb-10 bg-white border border-slate-200/60 rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-100/50 no-print">
+            <h3 class="text-xl font-extrabold text-brand-navyDark mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-brand-gold text-2xl"></i> تاقیکردنەوەی خێرا (ڕاهێنانی پڕکردنەوەی جێگا بەتاڵەکان)
+            </h3>
+            <p class="text-sm text-slate-500 font-medium mb-6">دەتوانیت وەڵامە دروستەکان بدۆزیتەوە؟ بە کلیک کردن لەسەر دوگمەی وەڵام، ڕاستی هاوکێشەکە ببینە.</p>
+            
+            <div class="space-y-4">
+                <!-- Drill Item 1 -->
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-[10px] bg-brand-navy/5 text-brand-navy font-bold px-2 py-1 rounded border border-slate-200">فەرمانی تاک (امر مفرد)</span>
+                        <p class="text-base font-semibold text-brand-navyDark mt-2">کرداری نوشتن &larr; فەرمانی تاکی دەبێت بە: <span class="font-mono bg-white px-3 py-1.5 rounded-lg border border-slate-200 inline-block text-brand-goldDark font-extrabold shadow-sm" id="drill-1-ans">بنویس</span></p>
+                    </div>
+                    <button onclick="revealAnswer('drill-1')" class="px-5 py-2.5 bg-brand-navyDark hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm">وەڵام پیشان بدە</button>
+                </div>
+
+                <!-- Drill Item 2 -->
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-[10px] bg-brand-navy/5 text-brand-navy font-bold px-2 py-1 rounded border border-slate-200">ماضی استمراری (من)</span>
+                        <p class="text-base font-semibold text-brand-navyDark mt-2">من + رفتن (ماضی استمراری) &larr; <span class="font-mono bg-white px-3 py-1.5 rounded-lg border border-slate-200 inline-block text-brand-goldDark font-extrabold shadow-sm" id="drill-2-ans">می‌رفتم</span></p>
+                    </div>
+                    <button onclick="revealAnswer('drill-2')" class="px-5 py-2.5 bg-brand-navyDark hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm">وەڵام پیشان بدە</button>
+                </div>
+
+                <!-- Drill Item 3 -->
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-150 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-[10px] bg-brand-navy/5 text-brand-navy font-bold px-2 py-1 rounded border border-slate-200">مضارع مستمر (او)</span>
+                        <p class="text-base font-semibold text-brand-navyDark mt-2">او + خوردن (مضارع مستمر) &larr; <span class="font-mono bg-white px-3 py-1.5 rounded-lg border border-slate-200 inline-block text-brand-goldDark font-extrabold shadow-sm" id="drill-3-ans">دارد می‌خورد</span></p>
+                    </div>
+                    <button onclick="revealAnswer('drill-3')" class="px-5 py-2.5 bg-brand-navyDark hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-sm">وەڵام پیشان بدە</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gamified Quiz Panel -->
+        <section class="mt-10 bg-brand-navyDark text-white rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden no-print">
+            <div class="absolute -right-16 -top-16 w-60 h-60 rounded-full bg-brand-gold/10 blur-2xl pointer-events-none"></div>
+
+            <div class="flex items-center gap-4 mb-8 relative z-10">
+                <div class="bg-brand-gold text-brand-navyDark p-3.5 rounded-2xl shadow-md">
+                    <i class="fa-solid fa-gamepad text-2xl animate-pulse"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-black text-white">کایەی ڕێزمانی فارسی: ئاستت تاقی بکەرەوە!</h3>
+                    <p class="text-sm text-slate-300 mt-1 font-medium">وەڵامی دروست دیاری بکە بۆ گەیشتن بە نمرەی تەواو</p>
+                </div>
+            </div>
+
+            <!-- Quiz Main Section -->
+            <div id="quiz-container" class="space-y-6 relative z-10">
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-lg sm:text-xl font-bold text-brand-gold mb-5" id="quiz-question">ئامادەکردنی پرسیار...</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="quiz-options">
+                        <!-- Custom styled buttons injected by javascript -->
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center flex-wrap gap-4 pt-2">
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-semibold text-slate-300">نمرەی کۆکراوە:</span>
+                        <span id="quiz-score" class="bg-brand-gold text-brand-navyDark px-4 py-1.5 rounded-xl text-sm font-extrabold shadow-md">٠ / ٠</span>
+                    </div>
+                    <button onclick="generateNextQuestion()" class="px-6 py-3 bg-brand-gold hover:bg-brand-gold/90 text-brand-navyDark font-extrabold rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                        پرسیاری داهاتوو <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page Footer with Gold Accents -->
+    <footer class="bg-brand-navyDark text-white py-10 px-6 mt-16 border-t border-brand-gold/20 text-center no-print">
+        <p class="text-brand-gold font-extrabold text-base mb-2">سەکۆی گشتگیری فێربوونی ڕێزمانی زمانی فارسی</p>
+        <p class="text-xs text-slate-400 font-medium">بەرزترین کوالێتی دیزاین و زانستی پێشەکەوتووی فێربوونی زمان</p>
+        <div class="w-12 h-0.5 bg-brand-gold/30 mx-auto my-6"></div>
+        <p class="text-[10px] text-slate-500 font-medium">&copy; ٢٠٢٦ ڕێبەرنامەی زێڕین. هەموو مافەکان پارێزراون.</p>
+    </footer>
+
+    <script>
+        // Data containing premium educational flashcards
+        const grammarFlashcards = [
+            { group: "فعل امر (کرداری فرمان)", front: "هاوکێشەی دروستکردنی فەرمانی تاک چییە؟", back: "بـ + ڕەگی ئێستا (بن مضارع) + بێ نیشانە (بنویس!)" },
+            { group: "فعل امر (کرداری فرمان)", front: "هاوکێشەی فەرمانی کۆ (شما) چییە؟", back: "بـ + ڕەگی ئێستا (بن مضارع) + ید (بنویسید!)" },
+            { group: "ماضی استمراری (ڕابردووی بەردەوام)", front: "چۆن ماضی استمراری لە ڕستەدا دروست دەبێت؟", back: "می + ڕەگی ڕابردوو (بن ماضی) + شناسه (می‌رفتم)" },
+            { group: "ماضی التزامی (ڕابردووی گومانی خواستی)", front: "هاوکێشەی ماضی التزامی چییە بۆ من؟", back: "صفت مفعولی + باشم (رفته باشم)" },
+            { group: "مضارع اخباری (ئێستای ڕاگەیاندن)", front: "هاوکێشەی سەرەکی مضارع اخباری چییە؟", back: "می + بن مضارع + شناسه (می‌نویسم)" },
+            { group: "مضارع مستمر (ئێستای بەردەوام)", front: "هاوکێشەی مضارع مستمر چییە؟", back: "داشتن (مضارع) + مضارع اخباری (دارم می‌روم)" }
+        ];
+
+        // Luxury Gamified quiz databases
+        const quizData = [
+            {
+                q: "کامیان هاوکێشەی دروستی کرداری فەرمانی تاک (امر مفرد) پیشان دەدات؟",
+                options: [
+                    "بـ + بن مضارع + بێ نیشانە",
+                    "می + بن ماضی + شناسه",
+                    "بـ + بن مضارع + ید",
+                    "می + بن مضارع + شناسه"
+                ],
+                correct: "بـ + بن مضارع + بێ نیشانە"
+            },
+            {
+                q: "کرداری 'رفتن' لە کاتی ماضی استمراری بۆ کەسی من چی لێ دێت؟",
+                options: [
+                    "می‌رفتم",
+                    "می‌روم",
+                    "رفته باشم",
+                    "دارم می‌روم"
+                ],
+                correct: "می‌رفتم"
+            },
+            {
+                q: "کامیان وەک نیشانەی کاتی 'ماضی استمراری' بەکاردێت لە دەقەکاندا؟",
+                options: [
+                    "همیشه / هر روز",
+                    "فردا / پس فردا",
+                    "الآن / همین حالا",
+                    "کاشکی / شاید"
+                ],
+                correct: "همیشه / هر روز"
+            },
+            {
+                q: "ڕابردووی گومانی خواستی (ماضی التزامی) بۆ کەسی من چۆنە؟",
+                options: [
+                    "رفته باشم",
+                    "می‌رفتم",
+                    "بروم",
+                    "رفته بودم"
+                ],
+                correct: "رفته باشم"
+            },
+            {
+                q: "لە کرداری 'نوشتن'، فەرمانی کۆی پێشگر چییە؟",
+                options: [
+                    "بنویسید!",
+                    "بنویس!",
+                    "ننویسید!",
+                    "مینویسید!"
+                ],
+                correct: "بنویسید!"
+            },
+            {
+                q: "کامیان هاوکێشەی ڕاستی ئێستای بەردەوام (مضارع مستمر) پیشان دەدات؟",
+                options: [
+                    "داشتن + مضارع اخباری",
+                    "بـ + بن مضارع + شناسه",
+                    "می + بن ماضی + شناسه",
+                    "صفت مفعولی + باشم"
+                ],
+                correct: "داشتن + مضارع اخباری"
+            }
+        ];
+
+        let currentCardIndex = 0;
+        let isCardFlipped = false;
+        let currentTab = "overview";
+        let scoreCorrect = 0;
+        let scoreTotal = 0;
+        let currentQuizAnswer = "";
+
+        // Triggering initial systems on page load
+        window.onload = function() {
+            updateFlashcard();
+            generateNextQuestion();
+        }
+
+        // Custom premium tab transitions
+        function switchTab(tabId) {
+            currentTab = tabId;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-sm bg-white text-brand-navy hover:bg-slate-50 border border-slate-200";
+            });
+
+            const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn active px-6 py-3.5 rounded-xl font-bold text-sm smooth-transition shadow-md bg-brand-navyDark text-white border border-brand-navyDark";
+            }
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+        }
+
+        // Search engine optimization inside elements
+        function filterGrammar() {
+            const query = document.getElementById('search-bar').value.toLowerCase().trim();
+            const elements = document.querySelectorAll('.tab-content p, .tab-content div, .tab-content section');
+            
+            elements.forEach(el => {
+                if (query === "") {
+                    el.style.opacity = "1";
+                    el.style.transform = "scale(1)";
+                } else if (el.innerText.toLowerCase().includes(query)) {
+                    el.style.opacity = "1";
+                    el.style.transform = "scale(1.01)";
+                } else {
+                    el.style.opacity = "0.35";
+                    el.style.transform = "scale(0.99)";
+                }
+            });
+        }
+
+        // Update Flashcard engine smoothly
+        function updateFlashcard() {
+            const card = grammarFlashcards[currentCardIndex];
+            const inner = document.getElementById('flashcard-inner');
+            inner.classList.remove('rotate-y-180');
+            isCardFlipped = false;
+
+            setTimeout(() => {
+                document.getElementById('card-sub').innerText = card.group;
+                document.getElementById('card-front').innerText = card.front;
+                document.getElementById('card-back').innerText = card.back;
+                document.getElementById('card-counter').innerText = `${currentCardIndex + 1} / ${grammarFlashcards.length}`;
+            }, 150);
+        }
+
+        function flipCard() {
+            const inner = document.getElementById('flashcard-inner');
+            if (isCardFlipped) {
+                inner.classList.remove('rotate-y-180');
+            } else {
+                inner.classList.add('rotate-y-180');
+            }
+            isCardFlipped = !isCardFlipped;
+        }
+
+        function nextCard() {
+            currentCardIndex = (currentCardIndex + 1) % grammarFlashcards.length;
+            updateFlashcard();
+        }
+
+        function prevCard() {
+            currentCardIndex = (currentCardIndex - 1 + grammarFlashcards.length) % grammarFlashcards.length;
+            updateFlashcard();
+        }
+
+        // Drill system answer reveals
+        function revealAnswer(drillId) {
+            const ansEl = document.getElementById(`${drillId}-ans`);
+            ansEl.classList.add('bg-amber-100', 'border-brand-gold', 'text-brand-goldDark');
+            showToast("پیرۆزە! ئەمە هاوکێشە ڕاستەکەیە.", "success");
+        }
+
+        // Dynamic Quiz logic
+        function generateNextQuestion() {
+            const randomIndex = Math.floor(Math.random() * quizData.length);
+            const quizItem = quizData[randomIndex];
+            
+            currentQuizAnswer = quizItem.correct;
+            document.getElementById('quiz-question').innerText = quizItem.q;
+
+            const optionsDiv = document.getElementById('quiz-options');
+            optionsDiv.innerHTML = "";
+            
+            quizItem.options.forEach(opt => {
+                const button = document.createElement('button');
+                button.className = "quiz-opt-btn bg-white/5 hover:bg-white/10 border border-white/10 p-4 rounded-xl text-right font-medium transition-all text-white flex items-center justify-between text-xs sm:text-sm";
+                button.onclick = function() { checkQuizAnswer(this, opt); };
+                button.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-xs opacity-50"></i>`;
+                optionsDiv.appendChild(button);
+            });
+        }
+
+        function checkQuizAnswer(selectedButton, selectedValue) {
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            buttons.forEach(btn => btn.disabled = true);
+
+            scoreTotal++;
+
+            if (selectedValue === currentQuizAnswer) {
+                selectedButton.className = "quiz-opt-btn bg-emerald-600 border-emerald-500 p-4 rounded-xl text-right font-bold transition-all text-white flex items-center justify-between text-xs sm:text-sm";
+                selectedButton.querySelector('i').className = "fa-solid fa-circle-check text-white";
+                scoreCorrect++;
+                showToast("وەڵامەکەت ڕاستە! ئافەرین.", "success");
+            } else {
+                selectedButton.className = "quiz-opt-btn bg-rose-600 border-rose-500 p-4 rounded-xl text-right font-bold transition-all text-white flex items-center justify-between text-xs sm:text-sm";
+                selectedButton.querySelector('i').className = "fa-solid fa-circle-xmark text-white";
+                
+                buttons.forEach(btn => {
+                    if (btn.innerText.trim() === currentQuizAnswer) {
+                        btn.className = "quiz-opt-btn bg-emerald-600 border-emerald-500 p-4 rounded-xl text-right font-bold transition-all text-white flex items-center justify-between text-xs sm:text-sm";
+                        btn.querySelector('i').className = "fa-solid fa-circle-check text-white";
+                    }
+                });
+                showToast("داوای لێبوردن دەکەین، هەوڵبدەرەوە.", "error");
+            }
+
+            document.getElementById('quiz-score').innerText = `${scoreCorrect} / ${scoreTotal}`;
+        }
+
+        // Premium notifications framework
+        function showToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-5 left-5 px-6 py-4 rounded-xl text-white font-bold text-sm shadow-xl transition-all duration-300 z-50 transform translate-y-10 opacity-0 flex items-center gap-2 border ${
+                type === 'success' ? 'bg-emerald-700 border-emerald-800' : 'bg-rose-700 border-rose-800'
+            }`;
+            toast.innerHTML = `
+                <i class="${type === 'success' ? 'fa-solid fa-circle-check' : 'fa-solid fa-triangle-exclamation'}"></i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+
+        function triggerPrint() {
+            // Expanding all tabs dynamically for accurate document outputs
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('hidden');
+            });
+            setTimeout(() => {
+                window.print();
+                switchTab(currentTab); // Return to default user view
+            }, 300);
+        }
+    </script>
+</body>
+</html>
